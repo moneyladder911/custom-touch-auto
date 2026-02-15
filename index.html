@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Touch Auto Repair | DIP Luxury Service</title>
+  <meta name="description"
+    content="Premium car repair & detailing in Dubai Investment Park (DIP). Expert mechanics, spotless workshop, & free pickup in Green Community/Damac Hills." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image"
+    href="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=70">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <svg class="logo-icon" viewBox="0 0 50 50" width="40" height="40">
+            <!-- Wrench -->
+            <path d="M8 35 L15 28 L22 35 L15 42 Z" fill="#c0c0c0" stroke="#888" stroke-width="1" />
+            <!-- Piston -->
+            <rect x="25" y="15" width="12" height="20" rx="2" fill="#5a9a8e" stroke="#4a8a7e" stroke-width="1.5" />
+            <rect x="27" y="12" width="8" height="4" fill="#5a9a8e" stroke="#4a8a7e" stroke-width="1" />
+            <circle cx="31" cy="22" r="2" fill="#2a4a44" />
+          </svg>
+          <span class="logo-text">CUSTOM TOUCH <span class="accent">AUTO</span></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#contact" class="btn-primary">Book Health Check</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-bg-media" id="hero-bg">
+        <!-- Will be filled with image/video later -->
+      </div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">DUBAI INVESTMENT PARK · AUTOMOTIVE EXCELLENCE</p>
+        <h1 class="hero-title">CUSTOM TOUCH<br>AUTO REPAIR</h1>
+        <p class="hero-subtitle">Where precision meets artistry in a state-of-the-art workshop.<br>Expert craftsmanship
+          for discerning drivers.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary large">Reserve Your Inspection</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <div class="icon">✨</div>
+          <h3>Skilled Technicians</h3>
+          <p>Equipped to handle everything from diagnostics to custom upgrades.</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">🛠️</div>
+          <h3>State-of-the-Art Tools</h3>
+          <p>Advanced technology to ensure your vehicle gets the care it deserves.</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">🤝</div>
+          <h3>Full Transparency</h3>
+          <p>A focus on safety, honesty, and complete customer satisfaction.</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">🏎️</div>
+          <h3>All Vehicles</h3>
+          <p>Cars, trucks, and SUVs handled with expert care.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2 class="section-title">Redefining Car Care <br>in <span class="accent">DIP</span></h2>
+            <p class="lead-text">
+              Custom Touch Auto is more than just a garage; it's a full-service automotive center committed to clinical
+              precision and customer transparency.
+            </p>
+            <p>
+              Located in the heart of Dubai Investment Park, we combine state-of-the-art technology with seasoned
+              expertise. Whether it’s a routine check-up or a complex engine overhaul, our mission is simple:
+              <strong>Reliable, Efficient, and High-Quality Service.</strong>
+            </p>
+            <ul class="about-features">
+              <li><span>✓</span> Expert Diagnostics & Mechanical Repairs</li>
+              <li><span>✓</span> Premium Paint & Body Work (2-Year Warranty)</li>
+              <li><span>✓</span> Luxury Detailing & Protection</li>
+            </ul>
+          </div>
+          <div class="about-gallery-grid">
+            <div class="about-gallery-item" id="about-img-1"></div>
+            <div class="about-gallery-item" id="about-img-2"></div>
+            <div class="about-gallery-item" id="about-img-3"></div>
+            <div class="about-gallery-item" id="about-img-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>DIP Precision Services</h2>
+          <p>Comprehensive care for luxury vehicles in Dubai Investment Park.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=70"
+              class="card-image" alt="Car Repair">
+            <div class="card-content">
+              <h3>Car Repair DIP</h3>
+              <p>Precision diagnostics and mechanical maintenance for European & Luxury cars in DIP.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80"
+              class="card-image" alt="Dent Removal">
+            <div class="card-content">
+              <h3>PDR Dent Removal Dubai</h3>
+              <p>Paintless dent removal to restore factory finish. Perfect for minor dings.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=600&q=70"
+              class="card-image" alt="Car Painting">
+            <div class="card-content">
+              <h3>Custom Paint & Body</h3>
+              <p>Factory-grade refinishing with our signature 2-year warranty.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=600&q=70"
+              class="card-image" alt="Car Detailing">
+            <div class="card-content">
+              <h3>PPF and Detailing DIP</h3>
+              <p>Protect your investment from the summer heat with premium PPF and ceramic coating.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=70"
+              class="card-image" alt="Window Tinting">
+            <div class="card-content">
+              <h3>AC Repair DIP</h3>
+              <p>Keep your cool with expert AC diagnostics and repair services in DIP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop Showcase -->
+    <section id="showcase" class="showcase">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Cleanest Workshop in Dubai</h2>
+          <p>See the difference. Masterpiece standards.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80"
+            class="gallery-item" alt="Professional Auto Workshop">
+          <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80"
+            class="gallery-item" alt="Luxury Car Detailing">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80"
+            class="gallery-item" alt="Premium Car Service">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container section-header">
+        <h2>Trusted by Dubai</h2>
+        <p>Real experiences from our valued clients.</p>
+      </div>
+
+      <div class="testimonial-scroller">
+        <div class="testimonial-track">
+          <!-- Set 1 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"I highly recommend this garage! They took amazing care of my car at a very reasonable price. Every issue
+              my car had was successfully resolved."</p>
+            <cite>Liubov Klymenko</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"My car was repaired in 2 hours, compared to others who suggested to leave it for 2-3 days. Excellent
+              efficiency."</p>
+            <cite>Andrey Jitkov</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Custom Touch is an excellent garage. The owner Rauf is an excellent guy and the mechanics are well
+              trained. They look after their customer."</p>
+            <cite>Mohammed Akhter</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"They are straightforward.. Budget friendly.. Gave me options for extensive or critical repairs based on
+              their evaluation. Using them for more than a year."</p>
+            <cite>James Xavier</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Fast, very good and reliable WORKSHOP for cars all kind of work.. very happy with the service provided."
+            </p>
+            <cite>Rijo Vlogs</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very kind and knowledgeable. Professional approach to every detail."</p>
+            <cite>Vinod Roger</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very supportive management.. Diagnosing and repair upto the mark.. Suggest the work only that is
+              required to be done."</p>
+            <cite>Siju Thomas</cite>
+          </div>
+
+          <!-- Set 2 (Duplicate for smooth loop) -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"I highly recommend this garage! They took amazing care of my car at a very reasonable price. Every issue
+              my car had was successfully resolved."</p>
+            <cite>Liubov Klymenko</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"My car was repaired in 2 hours, compared to others who suggested to leave it for 2-3 days. Excellent
+              efficiency."</p>
+            <cite>Andrey Jitkov</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Custom Touch is an excellent garage. The owner Rauf is an excellent guy and the mechanics are well
+              trained. They look after their customer."</p>
+            <cite>Mohammed Akhter</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"They are straightforward.. Budget friendly.. Gave me options for extensive or critical repairs based on
+              their evaluation. Using them for more than a year."</p>
+            <cite>James Xavier</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Fast, very good and reliable WORKSHOP for cars all kind of work.. very happy with the service provided."
+            </p>
+            <cite>Rijo Vlogs</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very kind and knowledgeable. Professional approach to every detail."</p>
+            <cite>Vinod Roger</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very supportive management.. Diagnosing and repair upto the mark.. Suggest the work only that is
+              required to be done."</p>
+            <cite>Siju Thomas</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section id="contact" class="cta-section">
+      <div class="cta-bg-image"></div>
+      <div class="cta-overlay"></div>
+      <div class="container cta-content">
+        <h2>Ready for <span class="text-gradient">Premium Care?</span></h2>
+        <p>Your vehicle deserves the best. We offer <strong>free pickup & delivery</strong> across Dubai Investment
+          Park, Green Community, and Damac Hills.</p>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me/971502933129?text=Hi,%20I'd%20like%20to%20arrange%20a%20car%20collection."
+            target="_blank" class="btn-primary large">
+            <span>🚗</span> Yes, Collect My Car
+          </a>
+          <a href="https://wa.me/971502933129?text=Hi,%20I'd%20like%20to%20book%20a%20free%20health%20check."
+            target="_blank" class="btn-secondary large">
+            Book Free Health Check
+          </a>
+        </div>
+
+        <p class="cta-note">Have questions? Call us directly: <a href="tel:+971502933129" class="accent">050 293
+            3129</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-layout">
+
+          <!-- Info Column -->
+          <div class="footer-info-col">
+            <h2 class="footer-logo">CUSTOM TOUCH AUTO</h2>
+            <p class="footer-tagline">The ultimate destination for premium car maintenance and repair in Dubai
+              Investment Park.</p>
+
+            <div class="footer-detail-row">
+              <div class="icon-wrap">📍</div>
+              <div class="detail-text">
+                <a href="https://share.google/qrGiE1oQyLqEud2AV" target="_blank"
+                  style="color: white; text-decoration: none;">
+                  <p>1/1, 55 Street</p>
+                  <p>52 Street, Dubai Investment Park 2</p>
+                  <p>Jebel Ali, Dubai - Dubai</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-detail-row">
+              <div class="icon-wrap">🕒</div>
+              <div class="detail-text">
+                <p>Mon - Sat: 08:00 AM - 07:00 PM</p>
+                <p>Sun: Closed</p>
+              </div>
+            </div>
+
+            <div class="footer-detail-row">
+              <div class="icon-wrap">📞</div>
+              <div class="detail-text">
+                <p>+971 50 293 3129</p>
+              </div>
+            </div>
+
+            <div class="footer-social">
+              <a href="https://www.instagram.com/customtouchauto/" target="_blank"
+                style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: white; transition: color 0.3s ease;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                Follow us on Instagram
+              </a>
+            </div>
+          </div>
+
+          <!-- Map Column -->
+          <div class="footer-map-col" style="position: relative;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14454.673854749234!2d55.1764724!3d24.9965556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f727b9c6d36f7%3A0xc6c4f82877114227!2sDubai%20Investment%20Park%202%20-%20Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="https://share.google/qrGiE1oQyLqEud2AV" target="_blank" class="map-overlay-link"
+              aria-label="Open in Google Maps">
+              <span>View Location</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2024 Custom Touch Auto Repair. All rights reserved.</p>
+        </div>
+      </div>
+
+      <!-- Floating WhatsApp Button -->
+      <a href="https://wa.me/971502933129" class="floating-chat-btn" target="_blank">
+        <div class="chat-icon">💬</div>
+        <span>Chat with a Specialist</span>
+      </a>
+    </footer>
+
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
