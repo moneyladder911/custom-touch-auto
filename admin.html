@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Dashboard | Custom Touch Auto</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Admin Specific Styles */
+        .admin-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 2rem;
+            background: #111;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+        }
+
+        .admin-header {
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: #222;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .quick-images {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .quick-img-btn {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.6;
+            border: 2px solid transparent;
+        }
+
+        .quick-img-btn:hover,
+        .quick-img-btn.active {
+            opacity: 1;
+            border-color: var(--color-accent);
+        }
+
+        .success-msg {
+            color: var(--color-accent);
+            margin-top: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <h2>Staff Portal</h2>
+            <p style="color: #666;">Update vehicle status for customer tracker.</p>
+        </div>
+
+        <form id="adminForm">
+            <div class="form-group">
+                <label>Plate Number</label>
+                <input type="text" id="plate" placeholder="e.g. A-12345" required>
+            </div>
+
+            <div class="form-group">
+                <label>Vehicle Model</label>
+                <input type="text" id="model" placeholder="e.g. Porsche 911" required>
+            </div>
+
+            <div class="form-group">
+                <label>Current Status</label>
+                <select id="status">
+                    <option value="Check-In">Check-In</option>
+                    <option value="In Service" selected>In Service</option>
+                    <option value="Awaiting Parts">Awaiting Parts</option>
+                    <option value="Quality Check">Quality Check</option>
+                    <option value="Ready for Pickup">Ready for Pickup</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Technician Note</label>
+                <textarea id="note" rows="3"
+                    placeholder="Update on progress...">Routine maintenance in progress.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Photo URL (or select below)</label>
+                <input type="url" id="image" placeholder="https://..." required>
+                <div class="quick-images">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+                        class="quick-img-btn" onclick="selectImage(this)">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80"
+                        class="quick-img-btn" onclick="selectImage(this)">
+                    <img src="https://images.unsplash.com/photo-1503376763036-066120622c74?auto=format&fit=crop&w=800&q=80"
+                        class="quick-img-btn" onclick="selectImage(this)">
+                    <img src="https://plus.unsplash.com/premium_photo-1661301075274-129323c2a2fd?q=80&w=2070&auto=format&fit=crop"
+                        class="quick-img-btn" onclick="selectImage(this)">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">Update Vehicle Record</button>
+            <div class="success-msg" id="successMsg">Success! Vehicle updated. Customer can now track it.</div>
+        </form>
+
+        <div style="margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem;">
+            <a href="index.html" class="btn-outline" style="font-size: 0.8rem;">Back to Website</a>
+            <a href="tracker.html?plate=A-12345" target="_blank" class="btn-outline" style="font-size: 0.8rem;">Test
+                Tracker (A-12345)</a>
+        </div>
+    </div>
+
+    <script>
+        function selectImage(img) {
+            document.getElementById('image').value = img.src;
+            document.querySelectorAll('.quick-img-btn').forEach(b => b.classList.remove('active'));
+            img.classList.add('active');
+        }
+
+        document.getElementById('adminForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const plate = document.getElementById('plate').value;
+            const data = {
+                model: document.getElementById('model').value,
+                status: document.getElementById('status').value,
+                note: document.getElementById('note').value,
+                image: document.getElementById('image').value,
+                timestamp: new Date().toLocaleString()
+            };
+
+            // Get existing DB or init new
+            const db = JSON.parse(localStorage.getItem('customTouchDB')) || {};
+            db[plate] = data;
+
+            // Save
+            localStorage.setItem('customTouchDB', JSON.stringify(db));
+
+            // Show success
+            const msg = document.getElementById('successMsg');
+            msg.style.display = 'block';
+            setTimeout(() => msg.style.display = 'none', 3000);
+        });
+    </script>
+</body>
+
+</html>

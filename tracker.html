@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Status | Custom Touch Auto</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Specific styles for tracker page (can migrate to style.css later) */
+        .portal-section {
+            padding-top: 120px;
+            /* Accounts for fixed nav */
+            min-height: 100vh;
+            background: var(--color-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .portal-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .portal-card {
+            background: rgba(22, 24, 25, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-border);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .portal-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .vehicle-info h2 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .vehicle-plate {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: var(--glow-text);
+        }
+
+        .live-feed {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .live-feed img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .live-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .live-badge::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        .portal-body {
+            padding: 2rem;
+        }
+
+        .technician-note {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--color-accent);
+            margin-bottom: 2rem;
+        }
+
+        .technician-note h4 {
+            margin-bottom: 0.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation (Simplified) -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="/logo-new.jpg" alt="Custom Touch Auto" class="logo-img">
+                    <span class="logo-text">CUSTOM TOUCH <span class="accent">AUTO</span></span>
+                </a>
+                <a href="index.html" class="btn-outline">Back to Home</a>
+            </div>
+        </nav>
+
+        <div class="portal-section">
+            <div class="portal-container" id="portalContainer">
+                <!-- Content injected via JS -->
+                <div style="text-align: center; color: #666; padding: 4rem;">
+                    <h2>Accessing Secure Portal...</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple Mock Backend script embedded for demo
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const plate = params.get('plate');
+            const container = document.getElementById('portalContainer');
+
+            // MOCK DATA (In real app, fetch from database)
+            const mockDB = JSON.parse(localStorage.getItem('customTouchDB')) || {
+                'A-12345': {
+                    model: 'Porsche 911 GT3',
+                    status: 'In Service',
+                    note: 'Engine oil drained. Inspecting brake pads now. Detected minor wear on rear rotors.',
+                    image: 'https://images.unsplash.com/photo-1503376763036-066120622c74?auto=format&fit=crop&w=1200&q=80',
+                    timestamp: new Date().toLocaleString()
+                },
+                'D-99887': {
+                    model: 'Range Rover Vogue',
+                    status: 'Quality Check',
+                    note: 'Final polish completed. Checking electronics systems before handover.',
+                    image: 'https://images.unsplash.com/photo-1605218427306-022ba8c6c6fa?auto=format&fit=crop&w=1200&q=80',
+                    timestamp: new Date().toLocaleString()
+                }
+            };
+
+            if (!plate) {
+                container.innerHTML = `<div class="portal-card" style="padding: 3rem; text-align: center;">
+          <h2>No Plate Number Provided</h2>
+          <p style="margin: 1rem 0;">Please return to home and enter a valid plate.</p>
+          <a href="index.html" class="btn-primary">Go Home</a>
+        </div>`;
+                return;
+            }
+
+            const vehicle = mockDB[plate];
+
+            if (vehicle) {
+                // Found Vehicle
+                container.innerHTML = `
+          <div class="portal-card">
+            <div class="portal-header">
+              <div class="vehicle-info">
+                <h2>${vehicle.model}</h2>
+                <div class="vehicle-plate">${plate}</div>
+              </div>
+              <div class="status-badge">${vehicle.status}</div>
+            </div>
+            
+            <div class="live-feed">
+              <img src="${vehicle.image}" alt="Live Service Feed">
+              <div class="live-badge">LIVE FEED</div>
+            </div>
+
+            <div class="portal-body">
+              <div class="technician-note">
+                <h4>Technician Update (${vehicle.timestamp})</h4>
+                <p>"${vehicle.note}"</p>
+              </div>
+              
+              <div class="action-row">
+                 <button onclick="window.location.reload()" class="btn-outline">Refresh Status</button>
+                 <a href="https://wa.me/971502933129" class="btn-primary">Contact Advisor</a>
+              </div>
+            </div>
+          </div>
+        `;
+            } else {
+                // Not Found
+                container.innerHTML = `
+          <div class="portal-card" style="padding: 3rem; text-align: center;">
+             <h2 style="color: #ff4444; margin-bottom: 1rem;">Vehicle Not Found</h2>
+             <p style="color: #888; margin-bottom: 2rem;">
+               We couldn't find an active service record for <strong>${plate}</strong>.<br>
+               Please check the plate number or contact us if you believe this is an error.
+             </p>
+             <div class="action-row">
+               <a href="index.html#tracker" class="btn-outline">Try Again</a>
+               <a href="admin.html" class="btn-secondary" style="font-size: 0.8rem; opacity: 0.5;">Staff Access</a>
+             </div>
+          </div>
+        `;
+            }
+        });
+    </script>
+</body>
+
+</html>

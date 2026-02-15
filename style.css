@@ -961,6 +961,74 @@ footer {
   }
 }
 
+/* Tracker Section */
+.tracker-section {
+  padding: 6rem 0;
+  background: radial-gradient(circle at center, rgba(14, 16, 17, 0.95) 0%, #000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tracker-card {
+  background: rgba(22, 24, 25, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  border-radius: 20px;
+  /* Slightly larger radius for modern feel */
+  max-width: 600px;
+  margin: 2rem auto 0;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.tracker-description {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.tracker-form .input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.tracker-form input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  /* Standard button radius */
+  color: white;
+  font-family: 'Unbounded', sans-serif;
+  /* Tech feel for numbers */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.tracker-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.2);
+}
+
+.tracker-form button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .tracker-form .input-group {
+    flex-direction: column;
+  }
+
+  .tracker-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
 /* About Section */
 .about-section {
   padding: var(--spacing-xl) 0;
