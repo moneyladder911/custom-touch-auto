@@ -1,18 +1,35 @@
-:root {
-  --color-bg: #0a0a0a;
-  --color-surface: #121212;
-  --color-surface-hover: #1a1a1a;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a3a3a3;
-  --color-accent: #5a9a8e;
-  /* Teal Green - matching logo */
-  --color-accent-glow: rgba(90, 154, 142, 0.5);
-  --color-border: #262626;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800&display=swap');
 
-  --font-heading: 'Montserrat', sans-serif;
+:root {
+  --color-bg: #0E1011;
+  /* Deep Smoky Charcoal */
+  --color-surface: #161819;
+  /* Slightly lighter anodized feel */
+  --color-surface-hover: #1E2122;
+  --color-text-primary: #ECECEC;
+  /* Off-white for less harsh contrast */
+  --color-text-secondary: #9AA0A6;
+  /* Metallic silver-grey */
+
+  /* Bioluminescent Neon Green */
+  --color-accent: #00FF9D;
+  --color-accent-dim: #00cc7d;
+
+  /* Thermal Glow Effect */
+  --glow-accent: 0 0 20px rgba(0, 255, 157, 0.4);
+  --glow-text: 0 0 15px rgba(0, 255, 157, 0.2);
+
+  --color-border: #2A2D30;
+  /* Dark metallic border */
+
+  --font-heading: 'Unbounded', 'Montserrat', sans-serif;
+  /* Hyper-expressive */
   --font-body: 'Inter', sans-serif;
   --font-main: var(--font-heading);
   /* Backwards compat if needed, but we should replace usages */
+
+  --gradient-metal: linear-gradient(145deg, #232526, #161819);
+  --gradient-text: linear-gradient(to right, #ffffff, #a3a3a3);
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
