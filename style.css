@@ -402,19 +402,18 @@ ul {
 }
 
 /* Main headline - large, elegant, spacious */
-/* Main headline - large, elegant, spacious */
 .hero-title {
   font-size: 5.5rem;
-  /* Increased from 4.2rem */
-  font-weight: 600;
-  /* Slightly bolder for impact */
-  letter-spacing: -0.02em;
-  /* Tighter for modern look */
+  font-weight: 300;
+  /* Thin / Light */
+  letter-spacing: 0.05em;
+  /* Increase tracking for elegance */
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   color: #ffffff;
   font-family: 'Montserrat', var(--font-heading);
+  /* Use Montserrat for thin weights */
 }
 
 /* Refined subtitle - editorial style */
