@@ -319,8 +319,8 @@ ul {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  /* Reduced gap closer text */
+  gap: 0.2rem;
+  /* Reduced gap closer text even more */
   text-decoration: none;
 }
 
