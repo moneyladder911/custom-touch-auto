@@ -96,6 +96,41 @@
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
+.hero-actions .btn-primary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hero-actions .btn-primary:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Original btn-primary for other sections */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #000000;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .btn-whatsapp:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
@@ -357,6 +392,8 @@ ul {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding-bottom: 15vh;
+  /* Shift content up to reveal car */
 }
 
 .hero-bg-media {
