@@ -1179,13 +1179,14 @@ footer {
 
 /* Background Images */
 #hero-bg {
-  background-image: url('https://images.unsplash.com/photo-1599423300746-b62505fd27be?auto=format&fit=crop&w=1920&q=90');
-  /* Confirmed: Green Lamborghini Aventador SVJ */
-  background-position: center center;
+  background-image: url('https://images.pexels.com/photos/13866448/pexels-photo-13866448.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  /* Verified Pexels Green Lambo */
+  background-position: center bottom;
   background-size: cover;
   filter: none;
-  /* Ensure no blur */
 }
+
+/* Ensure no blur */
 
 #about-img-1 {
   background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=70');
