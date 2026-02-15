@@ -1001,6 +1001,12 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  :root {
+    --spacing-xl: 4rem;
+    --spacing-lg: 3rem;
+    --spacing-md: 1.5rem;
+  }
+
   .hero-eyebrow {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
