@@ -306,7 +306,8 @@ ul {
   background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  /* Thinner header */
 }
 
 .nav-container {
