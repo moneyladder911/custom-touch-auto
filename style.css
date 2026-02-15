@@ -342,8 +342,7 @@ ul {
   /* Ensure logo fits without cropping */
   border-radius: 0;
   /* Explicitly square to avoid unwanted circles */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  /* Lift off background */
+  /* box-shadow removed for clean look */
 }
 
 .nav-links {
