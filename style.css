@@ -11,13 +11,13 @@
   --color-text-secondary: #9AA0A6;
   /* Metallic silver-grey */
 
-  /* Bioluminescent Neon Green */
-  --color-accent: #00FF9D;
-  --color-accent-dim: #00cc7d;
+  /* Sophisticated Electric Mint */
+  --color-accent: #34D399;
+  --color-accent-dim: #10B981;
 
-  /* Thermal Glow Effect */
-  --glow-accent: 0 0 20px rgba(0, 255, 157, 0.4);
-  --glow-text: 0 0 15px rgba(0, 255, 157, 0.2);
+  /* Softer Thermal Glow */
+  --glow-accent: 0 0 15px rgba(52, 211, 153, 0.25);
+  --glow-text: 0 0 10px rgba(52, 211, 153, 0.15);
 
   --color-border: #2A2D30;
   /* Dark metallic border */
@@ -291,11 +291,18 @@ ul {
   text-decoration: none;
 }
 
-.logo-banner {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  background: transparent;
+.logo-img {
+  width: 50px;
+  /* Adjust size as needed */
+  height: 50px;
+  object-fit: cover;
+  /* Ensures image fills the circle */
+  border-radius: 50%;
+  /* Makes the square image circular */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle border */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  /* Lift off background */
 }
 
 .nav-links {
