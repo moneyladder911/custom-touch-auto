@@ -335,9 +335,9 @@ ul {
 }
 
 .logo-img {
-  width: 50px;
-  /* Adjust size as needed */
-  height: 50px;
+  width: 65px;
+  /* Logo size slightly increased */
+  height: 65px;
   object-fit: contain;
   /* Ensure logo fits without cropping */
   border-radius: 0;
