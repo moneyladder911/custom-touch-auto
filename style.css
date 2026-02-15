@@ -338,14 +338,11 @@ ul {
   width: 50px;
   /* Adjust size as needed */
   height: 50px;
-  object-fit: cover;
-  /* Ensures image fills the circle */
-  border-radius: 50%;
-  /* Makes the square image circular */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  /* Subtle border */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  /* Lift off background */
+  object-fit: contain;
+  /* Ensure logo fits without cropping */
+  /* border-radius: 50%; RE MOVED */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); REMOVED */
+  /* box-shadow: ... REMOVED */
 }
 
 .nav-links {
