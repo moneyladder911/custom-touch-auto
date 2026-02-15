@@ -404,16 +404,39 @@ ul {
 /* Main headline - large, elegant, spacious */
 .hero-title {
   font-size: 5.5rem;
-  font-weight: 300;
-  /* Thin / Light */
-  letter-spacing: 0.05em;
-  /* Increase tracking for elegance */
+  font-weight: 700;
+  /* Bold/Heavy */
+  letter-spacing: -0.02em;
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   color: #ffffff;
-  font-family: 'Montserrat', var(--font-heading);
-  /* Use Montserrat for thin weights */
+  font-family: 'Unbounded', sans-serif;
+  /* Match section headers */
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  font-family: 'Unbounded', sans-serif;
+  /* Explicitly ensure match */
+  font-weight: 700;
+}
+
+.lead-text {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 1rem;
+  /* Reduced from 1.5rem */
+  font-weight: 500;
+}
+
+.about-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  /* Reduced from 2rem */
+  line-height: 1.6;
 }
 
 /* Refined subtitle - editorial style */
