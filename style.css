@@ -864,33 +864,41 @@ footer {
 }
 
 /* Floating Chat Button */
+/* Floating Chat Button */
 .floating-chat-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #000;
-  border: 1px solid #333;
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
+  background-color: rgba(14, 16, 17, 0.9);
+  /* Deep Charcoal with transparency */
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 50%;
+  /* Make it circular */
+  width: 60px;
+  height: 60px;
   display: flex;
+  /* Center the icon */
+  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  font-family: var(--font-main);
-  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(52, 211, 153, 0.2);
   z-index: 1000;
-  transition: transform 0.3s ease;
-  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .floating-chat-btn:hover {
-  transform: translateY(-5px);
-  background-color: #111;
+  transform: translateY(-5px) scale(1.05);
+  background-color: var(--color-accent);
+  color: #0E1011;
+  /* Dark text on bright bg */
+  box-shadow: 0 15px 40px rgba(52, 211, 153, 0.4);
 }
 
-.chat-icon {
-  font-size: 1.2rem;
+.floating-chat-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5;
 }
 
 /* Responsive */
