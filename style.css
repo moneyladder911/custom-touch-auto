@@ -402,11 +402,15 @@ ul {
 }
 
 /* Main headline - large, elegant, spacious */
+/* Main headline - large, elegant, spacious */
 .hero-title {
-  font-size: 4.2rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  line-height: 1.15;
+  font-size: 5.5rem;
+  /* Increased from 4.2rem */
+  font-weight: 600;
+  /* Slightly bolder for impact */
+  letter-spacing: -0.02em;
+  /* Tighter for modern look */
+  line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   color: #ffffff;
@@ -415,14 +419,17 @@ ul {
 
 /* Refined subtitle - editorial style */
 .hero-subtitle {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.4rem;
+  /* Increased from 1.1rem */
+  color: rgba(255, 255, 255, 0.85);
+  /* Brighter for readability */
   margin-bottom: 3rem;
-  max-width: 650px;
+  max-width: 750px;
+  /* Wider to accommodate larger text */
   margin-left: auto;
   margin-right: auto;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.6;
   letter-spacing: 0.02em;
   font-family: var(--font-body);
 }
@@ -432,6 +439,28 @@ ul {
   gap: 1rem;
   justify-content: center;
   margin-top: 3rem;
+}
+
+/* ... existing styles ... */
+
+@media (max-width: 768px) {
+  /* ... existing mobile styles ... */
+
+  .hero-title {
+    font-size: 3rem !important;
+    /* Increased from 2.2rem */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    /* Increased from 0.9rem */
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
 }
 
 /* Trust Indicators */
