@@ -1179,9 +1179,9 @@ footer {
 
 /* Background Images */
 #hero-bg {
-  background-image: url('https://images.pexels.com/photos/13866448/pexels-photo-13866448.jpeg?auto=compress&cs=tinysrgb&w=1920');
-  /* Verified Pexels Green Lambo */
-  background-position: center bottom;
+  background-image: url('/green-lambo.jpg');
+  /* Local: Green Lamborghini Huracan */
+  background-position: center center;
   background-size: cover;
   filter: none;
 }
