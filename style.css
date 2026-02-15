@@ -403,13 +403,14 @@ ul {
 
 /* Main headline - large, elegant, spacious */
 .hero-title {
-  font-size: 5.5rem;
+  font-size: 3.5rem;
+  /* Matched closer to section-title (3rem) but slightly larger for Hero hierarchy */
   font-weight: 700;
   /* Bold/Heavy */
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   color: #ffffff;
   font-family: 'Unbounded', sans-serif;
   /* Match section headers */
