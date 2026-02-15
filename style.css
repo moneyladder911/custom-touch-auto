@@ -940,6 +940,17 @@ footer {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  /* Make hero button smaller on mobile */
+  .hero-actions .btn-primary.large {
+    padding: 12px 24px;
+    /* Reduced from likely 16px 32px or more */
+    font-size: 0.9rem;
+    /* Reduced from 1rem+ */
+    width: auto;
+    /* Ensure it doesn't stretch weirdly */
+    max-width: 100%;
+  }
 }
 
 /* About Section */
